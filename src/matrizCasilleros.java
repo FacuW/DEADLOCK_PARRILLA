@@ -1,0 +1,34 @@
+package src;
+
+import java.util.ArrayList;
+
+public class matrizCasilleros {
+    private int filas;
+    private int columnas;
+    private Casillero[][] matriz;
+    public matrizCasilleros(int filas, int columnas){
+        this.filas = filas;
+        this.columnas = columnas;
+        this.matriz = new Casillero[filas][columnas];
+        generarMatriz();
+    }
+    private void generarMatriz(){
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                matriz[i][j] = new Casillero();  //en cada posicion de la matriz Casillero[][] instancio un Casillero
+            }
+        }
+    }
+/////////////////////////////////////////
+    @Override
+    public String toString() { ///////// solo para ver si anda
+        String show="";
+        for (int i = 0; i < filas; i++) {
+            show += "\n";
+            for (int j = 0; j < columnas; j++) {
+                show += " "+ matriz[i][j].getEstado();
+            }
+        }
+        return show;
+    }
+}
