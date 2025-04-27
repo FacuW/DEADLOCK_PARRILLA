@@ -19,7 +19,21 @@ public class matrizCasilleros {
             }
         }
     }
-/////////////////////////////////////////
+    private Object lockMatrizCasilleros = new Object();
+    public Casillero[][] getMatrizCasilleros() {
+        synchronized (lockMatrizCasilleros){ //se protege porque se puede devolver una matriz desactualizada
+            return matriz;
+        }
+    }
+
+    public int getColumnas() {
+        return columnas;
+    }
+    public int getFilas() {
+        return filas;
+    }
+
+    /////////////////////////////////////////
     @Override
     public String toString() { ///////// solo para ver si anda
         String show="";
