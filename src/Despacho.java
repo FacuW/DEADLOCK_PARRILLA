@@ -44,6 +44,7 @@ public class Despacho implements Runnable{
                     for ( Casillero[] casilleros : matriz.getMatrizCasilleros()){ //forEach anidado para recorrer la matriz y poder manuipular los casilleros
                         for (Casillero casillero : casilleros){
                             if (casillero.getPedido() == pedido){ //busco el pedido en la matriz
+                                pedido.setEstado(EstadoPedido.FALLIDO);// busco el pedido y lo marco como fallido.
                                 casillero.setEstado(estadoCasillero.FUERADESERVICIO); //anulo el casillero
                             }
                         }

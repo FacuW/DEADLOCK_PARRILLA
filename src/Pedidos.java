@@ -75,6 +75,14 @@ public class Pedidos {
         }
         return null;
     }
+    public Pedido getPedidoEnTransicion(int index) {
+        synchronized (lockListaEnTransicion){
+            if (!(listaEnTransicion.isEmpty())){ //me aseguro de que la lista no este vacia  ///----quizas sea innecesario----////
+                return listaEnTransicion.remove(index); //si se saca se borra
+            }
+        }
+        return null;
+    }
 
     ///getters de cantidades de las listas para Logger
     public int cantListaPedidos(){
