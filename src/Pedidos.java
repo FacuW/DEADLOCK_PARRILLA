@@ -30,7 +30,7 @@ public class Pedidos {
 
 
     public int getCantPedidos() {
-        return cantPedidos; //no se modifica, no hace falta synchrinized
+        return cantPedidos; //no se modifica, no hace falta synchronized
     }
 
     //setters de pedido->listas
@@ -81,6 +81,7 @@ public class Pedidos {
                 return listaEnTransicion.remove(index); //si se saca se borra
             }
         }
+        System.out.println("AAAAAAAAAAAAAAAAAAA------Entregas----");
         return null;
     }
 

@@ -25,7 +25,7 @@ public class Preparacion implements Runnable{
                     Pedido pedido = pedidos.getListaPedidos(); //pedido a settear
                     if (pedido == null){ // controlo que el pedido no sea null, porque si mas de un hilo
                                     // entro en el while y justo termina la Lista de Pedidos me va a dolver un null
-                        continue;
+                        continue; //va a iterar sin dormir, opinar con el grupo
                     }
                     matriz.getMatrizCasilleros()[randomFila][randomColumna].setEstado(estadoCasillero.OCUPADO); //casillero->OCUPADO
                     matriz.getMatrizCasilleros()[randomFila][randomColumna].aumentaContador();//contador del casillero ++
@@ -36,7 +36,7 @@ public class Preparacion implements Runnable{
             }
             //---Fin SC---//
             try {
-                Thread.sleep(75);  //cada iteracion debe tener una demora fija
+                Thread.sleep(50);  //cada iteracion debe tener una demora fija
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
