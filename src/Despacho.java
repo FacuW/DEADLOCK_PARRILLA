@@ -8,7 +8,7 @@ public class Despacho implements Runnable{
     private Pedidos pedidos; //para tener referencia de los pedidos (todas las listas)
     private int contadorDePedidos = 0; //para poder comparar con la cantidad de pedidos a hacer
 
-    public Despacho(matrizCasilleros matriz, Pedidos pedidos ){
+    public Despacho(matrizCasilleros matriz, Pedidos pedidos){
         this.matriz = matriz;  ///hay que protegerla de una SC al tomar un mismo casillero
         this.pedidos = pedidos;
     }
@@ -17,6 +17,7 @@ public class Despacho implements Runnable{
     @Override
     public void run() {
         while (contadorDePedidos < pedidos.getCantPedidos()){
+            //---inicio SC---//
             synchronized (lockMatriz){
                 if (pedidos.cantPedidosEnPreparacion() == 0){ //si no hay pedidos en preparacion pasa a la siguiente itereacion
                     try {
@@ -26,6 +27,8 @@ public class Despacho implements Runnable{
                     }
                     continue;
                 }
+                //no hace falta controlar si el pedido es null en esta intancia porque este es el unico proceso
+                //que saca pedidos y de lista anterior, y esta bloqueada
                 int pedidoRandom = ThreadLocalRandom.current().nextInt(0, pedidos.cantPedidosEnPreparacion());
                 Pedido pedido = pedidos.getPedidoEnPreparacion(pedidoRandom); //tomo el pedido aleatorio de la lista de pedidos en preparacion, y se borra de la lista
                 boolean infoCorrecta = ThreadLocalRandom.current().nextInt(0, 100) < 85;
@@ -51,6 +54,7 @@ public class Despacho implements Runnable{
                 }
                 contadorDePedidos++; //aumento contadorDePedidos para salir del while()
             } //salgo del synchronized para devolver el lock y duermo
+            //---Fin SC---//
             try {
                 Thread.sleep(50);  //cada iteracion debe tener una demora fija
             } catch (InterruptedException e) {

@@ -30,7 +30,7 @@ public class Pedidos {
 
 
     public int getCantPedidos() {
-        return cantPedidos; //no se modifica, no hace falta synchrinized
+        return cantPedidos; //no se modifica, no hace falta synchronized
     }
 
     //setters de pedido->listas
@@ -75,6 +75,15 @@ public class Pedidos {
         }
         return null;
     }
+    public Pedido getPedidoEnTransicion(int index) {
+        synchronized (lockListaEnTransicion){
+            if (!(listaEnTransicion.isEmpty())){ //me aseguro de que la lista no este vacia  ///----quizas sea innecesario----////
+                return listaEnTransicion.remove(index); //si se saca se borra
+            }
+        }
+        System.out.println("AAAAAAAAAAAAAAAAAAA------Entregas----");
+        return null;
+    }
 
     ///getters de cantidades de las listas para Logger
     public int cantListaPedidos(){
@@ -89,7 +98,6 @@ public class Pedidos {
         synchronized (lockListaEnTransicion){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
             return listaEnTransicion.size();
         }
-
     }
     public int cantPedidosEntregados(){
         synchronized (lockListaEntregados){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
