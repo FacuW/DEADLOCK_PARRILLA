@@ -7,6 +7,7 @@ public class Casillero {
     public Casillero() {
         this.estado = estadoCasillero.VACIO; //se instancia como "vacio"
         this.contador = 0; //se instacia contador en "0"
+        this.pedido = null; //pedido asociado nulo
     }
     public void setEstado(estadoCasillero estado) {
         this.estado = estado;

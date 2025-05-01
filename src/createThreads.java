@@ -1,7 +1,5 @@
 package src;
 
-import java.util.concurrent.Semaphore;
-
 public class createThreads {
     private int cantHilos;
     private Runnable proceso;

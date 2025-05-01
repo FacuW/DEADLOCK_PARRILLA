@@ -1,10 +1,8 @@
 package src;
 
-import java.util.ArrayList;
-
 public class matrizCasilleros {
-    private int filas;
-    private int columnas;
+    private final int filas;
+    private final int columnas;
     private Casillero[][] matriz;
     public matrizCasilleros(int filas, int columnas){
         this.filas = filas;

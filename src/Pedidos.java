@@ -8,7 +8,7 @@ public class Pedidos {
     private ArrayList<Pedido> listaEnTransicion = new ArrayList<>();
     private ArrayList<Pedido> listaEntregados = new ArrayList<>();
     private ArrayList<Pedido> listaFallidos = new ArrayList<>();
-    private int cantPedidos;
+    private final int cantPedidos;
 
     public Pedidos(int cantPedidos) {
         this.cantPedidos = cantPedidos;
@@ -17,7 +17,8 @@ public class Pedidos {
 
     private void generarListaPedidos() {  //al instanciar el objeto Pedidos se genera la lista
         for (int i = 0; i < cantPedidos; i++) {
-            listaPedidos.add(i, new Pedido());   //agrego la cantidad de pedidos que se quiera a la listaPedidos
+            //listaPedidos.add(i, new Pedido());   //agrego la cantidad de pedidos que se quiera a la listaPedidos
+            listaPedidos.add(new Pedido());
         }
     }
     ///////----Locks para las listas----//////////////
@@ -29,7 +30,7 @@ public class Pedidos {
 
 
     public int getCantPedidos() {
-        return cantPedidos;
+        return cantPedidos; //no se modifica, no hace falta synchrinized
     }
 
     //setters de pedido->listas
