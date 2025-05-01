@@ -45,4 +45,23 @@ public class matrizCasilleros {
         }
         return show;
     }
+    public String contadorDeUso() { ///////// solo para ver si anda
+        String show="";
+        for (int i = 0; i < filas; i++) {
+            show += "\n";
+            for (int j = 0; j < columnas; j++) {
+                show += " "+ matriz[i][j].getContador();
+            }
+        }
+        return show;
+    }
+    public int sumaContadorDeUso() { ///////// solo para ver si anda
+        int contador = 0;
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                contador += matriz[i][j].getContador();
+            }
+        }
+        return contador;
+    }
 }

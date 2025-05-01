@@ -24,6 +24,9 @@ public class Casillero {
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
+
+    public Pedido getPedido() { return pedido;  }
+
     public void borrarPedido(){ //por si hace falta sacar del casillero al finalizar la ejecución,
         this.pedido = null;     //mientras se este ejecutando se van a ir pisando
     }

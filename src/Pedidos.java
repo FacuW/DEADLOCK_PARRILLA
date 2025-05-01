@@ -27,8 +27,6 @@ public class Pedidos {
     private Object lockListaEntregados = new Object();
     private Object lockListaFallidos = new Object();
 
-    /////---quizas usar ReetrantLockReadWrite sea mejor---///
-    ////////////////////////////////////
 
     public int getCantPedidos() {
         return cantPedidos;
@@ -37,7 +35,7 @@ public class Pedidos {
     //setters de pedido->listas
 
     public void setPedidoEnPreparacion(Pedido enPreparacion) {
-        synchronized (lockListaEntregados){
+        synchronized (lockListaEnPreparacion){
             this.listaEnPreparacion.add(enPreparacion);
         }
     }
@@ -47,13 +45,13 @@ public class Pedidos {
         }
     }
     public void setPedidoEntregado(Pedido entregado) {
-        synchronized (lockListaEnPreparacion){
+        synchronized (lockListaEntregados){
             this.listaEntregados.add(entregado);
         }
     }
     public void setPedidoFallido(Pedido fallido) {
         synchronized (lockListaFallidos){
-            this.listaFallidos = listaFallidos;
+            this.listaFallidos.add(fallido);
         }
     }
     /////////
@@ -61,18 +59,20 @@ public class Pedidos {
     ///getters listas->pedido
 
     public Pedido getListaPedidos() {
-        if (!(listaPedidos.isEmpty())){ //me aseguro de que la lista no este vacia
-            synchronized (lockListaPedidos){
+        synchronized (lockListaPedidos){
+            if (!(listaPedidos.isEmpty())){ //me aseguro de que la lista no este vacia
                 return listaPedidos.remove(0); //saco el primer pedido de la lista, y se borran porque no van a volver a esta lista
             }
         }
         return null;
     }
-
     public Pedido getPedidoEnPreparacion(int index) {
         synchronized (lockListaEnPreparacion){
-            return listaEnPreparacion.get(index);
+            if (!(listaEnPreparacion.isEmpty())){ //me aseguro de que la lista no este vacia  ///----quizas sea innecesario----////
+                return listaEnPreparacion.remove(index); //si se saca se borra
+            }
         }
+        return null;
     }
 
     ///getters de cantidades de las listas para Logger
@@ -80,16 +80,25 @@ public class Pedidos {
         return listaPedidos.size();
     }
     public int cantPedidosEnPreparacion(){
-        return listaEnPreparacion.size();
+        synchronized (lockListaEnPreparacion){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
+            return listaEnPreparacion.size();
+        }
     }
     public int cantPedidosEnTransicion(){
-        return listaEnTransicion.size();
+        synchronized (lockListaEnTransicion){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
+            return listaEnTransicion.size();
+        }
+
     }
     public int cantPedidosEntregados(){
-        return listaEntregados.size();
+        synchronized (lockListaEntregados){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
+            return listaEntregados.size();
+        }
     }
     public int cantPedidosFallidos(){
-        return listaFallidos.size();
+        synchronized (lockListaFallidos){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
+            return listaFallidos.size();
+        }
     }
 
     @Override

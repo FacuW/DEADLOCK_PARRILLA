@@ -9,18 +9,22 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(matrizCasilleros.toString()); ///solo para prueba
 
         Preparacion preparacion = new Preparacion(matrizCasilleros, pedidos);
         createThreads threadsPreparacion = new createThreads(3, preparacion, "Preparacion");
+
+        Despacho despacho = new Despacho(matrizCasilleros, pedidos);
+        createThreads threadsDespacho = new createThreads(2, despacho, "Despacho");
         try {
-            Thread.sleep(10000);  /// delay para que termine bien preparacion, si no anda agregar mas tiempo
+            Thread.sleep(20000);  /// delay para que termine bien despacho, si no anda agregar mas tiempo
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         ///solo para prueba
-        System.out.println(matrizCasilleros.toString()); //matriz todos OCUPADOS
-        System.out.println(pedidos.cantListaPedidos()); //deberia devolver 300
-        System.out.println(pedidos.cantPedidosEnPreparacion());//deveria devolver 200
+        System.out.println("cantPedidosEnPreparacion: " + pedidos.cantPedidosEnPreparacion());//deveria devolver 0
+        System.out.println("cantPedidosEnTransicion: " + pedidos.cantPedidosEnTransicion());
+        System.out.println("cantPedidosFallidos: " + pedidos.cantPedidosFallidos());  //la suma de Fallidos y EnTransicion deveria la cantidad de pedidos (500)
+        System.out.println(matrizCasilleros.contadorDeUso()); //matriz todos contadores
+        System.out.println(matrizCasilleros.sumaContadorDeUso()); //suma de todos contadores -> deberia dar 500
     }
 }
