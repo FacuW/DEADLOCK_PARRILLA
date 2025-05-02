@@ -20,6 +20,14 @@ public class Main {
         createThreads threadsEntregas = new createThreads(3, entregas, "Entregas");
 
         try {
+            Thread.sleep(2000);  /// delay para que forme primero la matriz
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Verificacion verificacion = new Verificacion(matrizCasilleros, pedidos);
+        createThreads threadsVerificacion = new createThreads(2, verificacion, "Verificacion");
+
+        try {
             Thread.sleep(15000);  /// delay para que termine bien despacho, si no anda agregar mas tiempo
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -28,6 +36,7 @@ public class Main {
         System.out.println("cantPedidosEnPreparacion: " + pedidos.cantPedidosEnPreparacion()); //deveria devolver 0
         System.out.println("cantPedidosEnTransicion: " + pedidos.cantPedidosEnTransicion()); //deveria devolver 0
         System.out.println("cantPedidosEntregados: " + pedidos.cantPedidosEntregados());
+        System.out.println("cantPedidosVerificados: " + pedidos.cantPedidosVerificados());
         System.out.println("cantPedidosFallidos: " + pedidos.cantPedidosFallidos());  //la suma de Fallidos y Entregados deveria la cantidad de pedidos (500)
         System.out.println(matrizCasilleros.contadorDeUso()); //matriz todos contadores
         System.out.println(matrizCasilleros.sumaContadorDeUso()); //suma de todos contadores -> deberia dar 500

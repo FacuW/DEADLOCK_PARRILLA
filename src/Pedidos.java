@@ -8,6 +8,7 @@ public class Pedidos {
     private ArrayList<Pedido> listaEnTransicion = new ArrayList<>();
     private ArrayList<Pedido> listaEntregados = new ArrayList<>();
     private ArrayList<Pedido> listaFallidos = new ArrayList<>();
+    private ArrayList<Pedido> listaVerifcados = new ArrayList<>();
     private final int cantPedidos;
 
     public Pedidos(int cantPedidos) {
@@ -26,6 +27,7 @@ public class Pedidos {
     private Object lockListaEnPreparacion = new Object();
     private Object lockListaEnTransicion = new Object();
     private Object lockListaEntregados = new Object();
+    private Object lockListaVerifcados = new Object();
     private Object lockListaFallidos = new Object();
 
 
@@ -48,6 +50,11 @@ public class Pedidos {
     public void setPedidoEntregado(Pedido entregado) {
         synchronized (lockListaEntregados){
             this.listaEntregados.add(entregado);
+        }
+    }
+    public void setPedidoVerificado(Pedido entregado) {
+        synchronized (lockListaVerifcados){
+            this.listaVerifcados.add(entregado);
         }
     }
     public void setPedidoFallido(Pedido fallido) {
@@ -81,7 +88,25 @@ public class Pedidos {
                 return listaEnTransicion.remove(index); //si se saca se borra
             }
         }
+        System.out.println("AAAAAAAAAAAAAAAAAAA------Transicion----");
+        return null;
+    }
+    public Pedido getPedidoEnEntregados(int index) {
+        synchronized (lockListaEntregados){
+            if (!(listaEntregados.isEmpty())){ //me aseguro de que la lista no este vacia  ///----quizas sea innecesario----////
+                return listaEntregados.remove(index); //si se saca se borra
+            }
+        }
         System.out.println("AAAAAAAAAAAAAAAAAAA------Entregas----");
+        return null;
+    }
+    public Pedido getPedidoEnVerificados(int index) {
+        synchronized (lockListaVerifcados){
+            if (!(listaVerifcados.isEmpty())){ //me aseguro de que la lista no este vacia  ///----quizas sea innecesario----////
+                return listaVerifcados.remove(index); //si se saca se borra
+            }
+        }
+        System.out.println("AAAAAAAAAAAAAAAAAAA------Verificado----");
         return null;
     }
 
@@ -105,6 +130,11 @@ public class Pedidos {
             return listaEntregados.size();
         }
     }
+    public int cantPedidosVerificados(){
+        synchronized (lockListaVerifcados){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
+            return listaVerifcados.size();
+        }
+    }
     public int cantPedidosFallidos(){
         synchronized (lockListaFallidos){ //se protege porque se puede modificar la cantidad en paralero y dar un size erroneo
             return listaFallidos.size();
@@ -113,6 +143,6 @@ public class Pedidos {
 
     @Override
     public String toString() { //solo de prueba
-        return listaPedidos.size() + "";
+        return listaPedidos.size() + " p";
     }
 }
