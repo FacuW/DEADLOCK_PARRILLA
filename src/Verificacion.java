@@ -1,13 +1,10 @@
 package src;
-
 import java.util.concurrent.ThreadLocalRandom;
-
 public class Verificacion implements Runnable{
-    private matrizCasilleros matriz;
+    private Matriz matriz;
     private Pedidos pedidos;
     private int contadorDePedidos = 0;
-
-    public Verificacion(matrizCasilleros matriz,Pedidos pedidos) {
+    public Verificacion(Matriz matriz,Pedidos pedidos) {
         this.matriz  = matriz;
         this.pedidos = pedidos;
     }
@@ -26,7 +23,7 @@ public class Verificacion implements Runnable{
                     continue;
                 }
                 //no hace falta controlar si el pedido es null en esta intancia porque este es el unico proceso
-                //que saca pedidos y de lista anterior, y esta bloqueada
+                //que saca pedidos de la lista anterior
                 int pedidoRandom = ThreadLocalRandom.current().nextInt(0, pedidos.cantPedidosEntregados());
                 Pedido pedido = pedidos.getPedidoEnEntregados(pedidoRandom); //tomo el pedido aleatorio de la lista de pedidos entregados, y se borra de la lista
                 boolean infoCorrecta = ThreadLocalRandom.current().nextInt(0, 100) < 95;
@@ -47,6 +44,5 @@ public class Verificacion implements Runnable{
             }
         }
         System.out.println("Termino : " + Thread.currentThread().getName()); //solo para ver que corra
-
     }
 }

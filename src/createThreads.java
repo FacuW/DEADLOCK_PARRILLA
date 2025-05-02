@@ -1,17 +1,16 @@
 package src;
 
-public class createThreads {
+public class CreateThreads {
     private int cantHilos;
     private Runnable proceso;
     private String nameProceso;
-    public createThreads(int cantHilos, Runnable proceso, String nameProceso){
+    public CreateThreads(int cantHilos, Runnable proceso, String nameProceso){
         this.cantHilos = cantHilos;
         this.proceso = proceso;
         this.nameProceso = nameProceso;
-        run();
+        lanzarHilos();
     }
-    private void run(){     //privada para que no se pueda acceder desde otro lado,
-                            //solo se ejecuta cuando se instancia un objeto createThreads
+    private void lanzarHilos(){   //solo se ejecuta cuando se instancia un objeto CreateThreads
         for (int i = 0; i<cantHilos; i++){
             String nameThread = "Thread - "+ i+" - " + nameProceso;
             Thread thread = new Thread(proceso, nameThread);

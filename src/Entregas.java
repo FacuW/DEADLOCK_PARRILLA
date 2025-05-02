@@ -2,14 +2,13 @@ package src;
 
 import java.util.concurrent.ThreadLocalRandom;
 public class Entregas implements Runnable{
-    private matrizCasilleros matriz; //para tener referencia de la matriz
+    private Matriz matriz; //para tener referencia de la matriz
     private Pedidos pedidos; //para tener referencia de los pedidos (todas las listas)
-    private int contadorDePedidos = 0; //para poder comparar con la cantidad de pedidos a hacer
-    public Entregas(matrizCasilleros matriz, Pedidos pedidos){
+    public Entregas(Matriz matriz, Pedidos pedidos){
         this.matriz = matriz;  ///hay que protegerla de una SC al tomar un mismo casillero
         this.pedidos = pedidos;
     }
-    private Object lockEntregas = new Object(); //cambiar nombre
+    private Object lockEntregas = new Object();
     @Override
     public void run() {
         while ((pedidos.cantPedidosVerificados() + pedidos.cantPedidosFallidos()) < pedidos.getCantPedidos()){
@@ -24,19 +23,17 @@ public class Entregas implements Runnable{
                     continue;
                 }
                 //no hace falta controlar si el pedido es null en esta intancia porque este es el unico proceso
-                //que saca pedidos y de lista anterior, y esta bloqueada
+                //que saca pedidos de la lista anterior
                 int pedidoRandom = ThreadLocalRandom.current().nextInt(0, pedidos.cantPedidosEnTransicion());
                 Pedido pedido = pedidos.getPedidoEnTransicion(pedidoRandom); //tomo el pedido aleatorio de la lista de pedidos en transicion, y se borra de la lista
                 boolean infoCorrecta = ThreadLocalRandom.current().nextInt(0, 100) < 90;
                 if (infoCorrecta){
                     pedidos.setPedidoEntregado(pedido);//seteo el pedido a PedidoEntregados
-//                    contadorDePedidos++; //aumento contadorDePedidos para salir del while()
                 }
                 else {
                     pedido.setEstado(EstadoPedido.FALLIDO);
                     pedidos.setPedidoFallido(pedido); //seteo el pedido a PedidoFallido
                 }
-                //contadorDePedidos++; //aumento contadorDePedidos para salir del while()
             } //salgo del synchronized para devolver el lock y duermo
             //---Fin SC---//
             try {

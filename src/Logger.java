@@ -1,15 +1,13 @@
 package src;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
 public class Logger implements Runnable{
     private static final String LOG_FILE = "Registro de Pedidos.log";
-    private matrizCasilleros matriz;
+    private Matriz matriz;
     private Pedidos pedidos;
     private long inicio;
-    public Logger(matrizCasilleros matriz, Pedidos pedidos, long inicio){
+    public Logger(Matriz matriz, Pedidos pedidos, long inicio){
         this.matriz = matriz;
         this.pedidos = pedidos;
         this.inicio = inicio;
@@ -26,7 +24,10 @@ public class Logger implements Runnable{
     public void run() {
         escribirLog("----Inicio de Registro de Pedidos----", true);
         while ((pedidos.cantPedidosVerificados() + pedidos.cantPedidosFallidos()) < pedidos.getCantPedidos()){
-            String log = "\n------------------------------------";
+            String log = "------------------------------------";
+            log += "\n Cantidad de Pedidos Preparacion: " + pedidos.cantPedidosEnPreparacion();
+            log += "\n Cantidad de Pedidos Transicion: " + pedidos.cantPedidosEnTransicion();
+            log += "\n Cantidad de Pedidos Entregados: " + pedidos.cantPedidosEntregados();
             log += "\n Cantidad de Pedidos Fallidos: " + pedidos.cantPedidosFallidos();
             log += "\n Cantidad de Pedidos Verificados: " + pedidos.cantPedidosVerificados();
             escribirLog(log, false);
@@ -37,16 +38,17 @@ public class Logger implements Runnable{
             }
         }
         //Tiene que haber una última escritura fuera del while() para que figure como terminaron las variables
-        String log = "\n------------------------------------";
+        String log = "------------------------------------";
+        log += "\n Cantidad de Pedidos Preparacion: " + pedidos.cantPedidosEnPreparacion();
+        log += "\n Cantidad de Pedidos Transicion: " + pedidos.cantPedidosEnTransicion();
+        log += "\n Cantidad de Pedidos Entregados: " + pedidos.cantPedidosEntregados();
         log += "\n Cantidad de Pedidos Fallidos: " + pedidos.cantPedidosFallidos();
         log += "\n Cantidad de Pedidos Verificados: " + pedidos.cantPedidosVerificados();
         log += "\n------------------------------------";
         escribirLog(log, false);
-        ////////////////////////////////
         escribirLog(matriz.contadorDeUso(), false); //imprimo contadores de los casilleros
         long fin = System.currentTimeMillis();
-        escribirLog( "\n--------------Tiempo de ejecución: " + (fin - inicio) + " ms--------------", false);
-
+        escribirLog( "\n------Tiempo de ejecución: " + (fin - inicio) + " ms------", false);
         System.out.println("Termino : " + Thread.currentThread().getName()); //solo para ver que corra
     }
 }
