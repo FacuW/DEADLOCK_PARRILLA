@@ -24,11 +24,11 @@ public class Preparacion implements Runnable{
                 if (matriz.getMatrizCasilleros()[randomFila][randomColumna].getEstado() == estadoCasillero.VACIO){ //si esta OCUPADO itera de vuelta
                     Pedido pedido = pedidos.getListaPedidos(); //pedido a settear
                     if (pedido == null){ // controlo que el pedido no sea null, porque si mas de un hilo
-                                    // entro en el while y justo termina la Lista de Pedidos me va a dolver un null
-                        continue; //va a iterar sin dormir, opinar con el grupo
+                                    // entro en el while y justo termina la Lista de Pedidos me va a delver un null
+                        continue;
                     }
                     matriz.getMatrizCasilleros()[randomFila][randomColumna].setEstado(estadoCasillero.OCUPADO); //casillero->OCUPADO
-                    matriz.getMatrizCasilleros()[randomFila][randomColumna].aumentaContador();//contador del casillero ++
+                    matriz.getMatrizCasilleros()[randomFila][randomColumna].aumentaContador(); //contador del casillero ++
                     matriz.getMatrizCasilleros()[randomFila][randomColumna].setPedido(pedido); //setteo el pedido al casillero
                     pedidos.setPedidoEnPreparacion(pedido);//setteo el pedido a la lista de pedidos en preparación
                     contadorDePedidos++; //aumento contadorDePedidos para salir del while()

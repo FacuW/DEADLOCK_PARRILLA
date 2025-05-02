@@ -12,12 +12,12 @@ public class Entregas implements Runnable{
     private Object lockEntregas = new Object(); //cambiar nombre
     @Override
     public void run() {
-        while (contadorDePedidos < (pedidos.getCantPedidos() - pedidos.cantPedidosFallidos())){
+        while ((pedidos.cantPedidosVerificados() + pedidos.cantPedidosFallidos()) < pedidos.getCantPedidos()){
             //---inicio SC---//
             synchronized (lockEntregas){
                 if (pedidos.cantPedidosEnTransicion() == 0){ //si no hay pedidos en transicion pasa a la siguiente itereacion
                     try {
-                        Thread.sleep(50);  //cada iteracion debe tener una demora fija
+                        Thread.sleep(70);  //cada iteracion debe tener una demora fija
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
@@ -30,15 +30,17 @@ public class Entregas implements Runnable{
                 boolean infoCorrecta = ThreadLocalRandom.current().nextInt(0, 100) < 90;
                 if (infoCorrecta){
                     pedidos.setPedidoEntregado(pedido);//seteo el pedido a PedidoEntregados
-                    contadorDePedidos++; //aumento contadorDePedidos para salir del while()
+//                    contadorDePedidos++; //aumento contadorDePedidos para salir del while()
                 }
                 else {
+                    pedido.setEstado(EstadoPedido.FALLIDO);
                     pedidos.setPedidoFallido(pedido); //seteo el pedido a PedidoFallido
                 }
+                //contadorDePedidos++; //aumento contadorDePedidos para salir del while()
             } //salgo del synchronized para devolver el lock y duermo
             //---Fin SC---//
             try {
-                Thread.sleep(50);  //cada iteracion debe tener una demora fija
+                Thread.sleep(70);  //cada iteracion debe tener una demora fija
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

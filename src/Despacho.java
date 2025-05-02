@@ -21,7 +21,7 @@ public class Despacho implements Runnable{
             synchronized (lockMatriz){
                 if (pedidos.cantPedidosEnPreparacion() == 0){ //si no hay pedidos en preparacion pasa a la siguiente itereacion
                     try {
-                        Thread.sleep(50);  //cada iteracion debe tener una demora fija
+                        Thread.sleep(60);  //cada iteracion debe tener una demora fija
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
@@ -43,11 +43,12 @@ public class Despacho implements Runnable{
                         }
                     }
                 }else {
+                    pedido.setEstado(EstadoPedido.FALLIDO);
                     pedidos.setPedidoFallido(pedido); //seteo el pedido a PedidoFallido
                     for ( Casillero[] casilleros : matriz.getMatrizCasilleros()){ //forEach anidado para recorrer la matriz y poder manuipular los casilleros
                         for (Casillero casillero : casilleros){
                             if (casillero.getPedido() == pedido){ //busco el pedido en la matriz
-                                pedido.setEstado(EstadoPedido.FALLIDO);// busco el pedido y lo marco como fallido.
+                                casillero.getPedido().setEstado(EstadoPedido.FALLIDO);// busco el pedido y lo marco como fallido.
                                 casillero.setEstado(estadoCasillero.FUERADESERVICIO); //anulo el casillero
                             }
                         }
@@ -57,7 +58,7 @@ public class Despacho implements Runnable{
             } //salgo del synchronized para devolver el lock y duermo
             //---Fin SC---//
             try {
-                Thread.sleep(50);  //cada iteracion debe tener una demora fija
+                Thread.sleep(60);  //cada iteracion debe tener una demora fija
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

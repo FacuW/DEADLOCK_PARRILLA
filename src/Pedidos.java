@@ -88,7 +88,6 @@ public class Pedidos {
                 return listaEnTransicion.remove(index); //si se saca se borra
             }
         }
-        System.out.println("AAAAAAAAAAAAAAAAAAA------Transicion----");
         return null;
     }
     public Pedido getPedidoEnEntregados(int index) {
@@ -97,7 +96,6 @@ public class Pedidos {
                 return listaEntregados.remove(index); //si se saca se borra
             }
         }
-        System.out.println("AAAAAAAAAAAAAAAAAAA------Entregas----");
         return null;
     }
     public Pedido getPedidoEnVerificados(int index) {
@@ -106,7 +104,6 @@ public class Pedidos {
                 return listaVerifcados.remove(index); //si se saca se borra
             }
         }
-        System.out.println("AAAAAAAAAAAAAAAAAAA------Verificado----");
         return null;
     }
 
