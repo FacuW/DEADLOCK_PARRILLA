@@ -1,5 +1,4 @@
 package src;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -17,10 +16,10 @@ public class Main {
         Despacho despacho = new Despacho(matriz, pedidos);
         CreateThreads threadsDespacho = new CreateThreads(2, despacho, "Despacho");
 
-        Entregas entregas = new Entregas(matriz, pedidos);
+        Entregas entregas = new Entregas(pedidos);
         CreateThreads threadsEntregas = new CreateThreads(3, entregas, "Entregas");
 
-        Verificacion verificacion = new Verificacion(matriz, pedidos);
+        Verificacion verificacion = new Verificacion(pedidos);
         CreateThreads threadsVerificacion = new CreateThreads(2, verificacion, "Verificacion");
     }
 }
