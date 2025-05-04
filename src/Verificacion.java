@@ -9,7 +9,7 @@ public class Verificacion implements Runnable{
     private Object lockVerificacion = new Object();
     @Override
     public void run(){
-        while (contadorDePedidos < (pedidos.getCantPedidos() - pedidos.cantPedidosFallidos())){
+        while (pedidos.cantPedidosVerificados() < (pedidos.getCantPedidos() - pedidos.cantPedidosFallidos())){
             //---inicio SC---//
             synchronized (lockVerificacion){
                 if (pedidos.cantPedidosEntregados() > 0){ //si no hay pedidos en Entregados pasa a la siguiente itereacion
@@ -20,7 +20,7 @@ public class Verificacion implements Runnable{
                     boolean infoCorrecta = ThreadLocalRandom.current().nextInt(0, 100) < 95;
                     if (infoCorrecta){
                         pedidos.setPedidoVerificado(pedido);//seteo el pedido a PedidoEntregados
-                        contadorDePedidos++; //aumento contadorDePedidos para salir del while()
+                        //contadorDePedidos++; //aumento contadorDePedidos para salir del while()
                     }
                     else {
                         pedido.setEstado(EstadoPedido.FALLIDO);
