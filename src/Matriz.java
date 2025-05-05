@@ -1,12 +1,9 @@
 package src;
-
-import java.util.ArrayList;
-
-public class matrizCasilleros {
-    private int filas;
-    private int columnas;
+public class Matriz {
+    private final int filas;
+    private final int columnas;
     private Casillero[][] matriz;
-    public matrizCasilleros(int filas, int columnas){
+    public Matriz(int filas, int columnas){
         this.filas = filas;
         this.columnas = columnas;
         this.matriz = new Casillero[filas][columnas];
@@ -19,28 +16,24 @@ public class matrizCasilleros {
             }
         }
     }
-    private Object lockMatrizCasilleros = new Object();
-    public Casillero[][] getMatrizCasilleros() {
-        synchronized (lockMatrizCasilleros){ //se protege porque se puede devolver una matriz desactualizada
+    private Object lockMatriz = new Object();
+    public Casillero[][] getMatriz() {
+        synchronized (lockMatriz){ //se protege porque se puede devolver una matriz desactualizada
             return matriz;
         }
     }
-
     public int getColumnas() {
         return columnas;
     }
     public int getFilas() {
         return filas;
     }
-
-    /////////////////////////////////////////
-    @Override
-    public String toString() { ///////// solo para ver si anda
+    public String contadorDeUso() {
         String show="";
         for (int i = 0; i < filas; i++) {
             show += "\n";
             for (int j = 0; j < columnas; j++) {
-                show += " "+ matriz[i][j].getEstado();
+                show += " "+ matriz[i][j].getContador();
             }
         }
         return show;
