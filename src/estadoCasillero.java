@@ -1,5 +1,5 @@
 package src;
 
-public enum estadoCasillero {
+public enum EstadoCasillero {
     VACIO, OCUPADO, FUERADESERVICIO
 }
