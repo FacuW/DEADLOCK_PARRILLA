@@ -1,0 +1,537 @@
+----Inicio de Registro de Pedidos----
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 1
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 0
+ Cantidad de Pedidos Fallidos: 0
+ Cantidad de Pedidos Verificados: 2
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 4
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 1
+ Cantidad de Pedidos Fallidos: 1
+ Cantidad de Pedidos Verificados: 4
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 7
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 4
+ Cantidad de Pedidos Fallidos: 1
+ Cantidad de Pedidos Verificados: 8
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 9
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 5
+ Cantidad de Pedidos Fallidos: 1
+ Cantidad de Pedidos Verificados: 12
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 13
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 7
+ Cantidad de Pedidos Fallidos: 3
+ Cantidad de Pedidos Verificados: 16
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 13
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 9
+ Cantidad de Pedidos Fallidos: 4
+ Cantidad de Pedidos Verificados: 21
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 16
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 9
+ Cantidad de Pedidos Fallidos: 6
+ Cantidad de Pedidos Verificados: 25
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 18
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 7
+ Cantidad de Pedidos Fallidos: 11
+ Cantidad de Pedidos Verificados: 28
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 20
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 9
+ Cantidad de Pedidos Fallidos: 11
+ Cantidad de Pedidos Verificados: 32
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 22
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 10
+ Cantidad de Pedidos Fallidos: 11
+ Cantidad de Pedidos Verificados: 37
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 11
+ Cantidad de Pedidos Fallidos: 13
+ Cantidad de Pedidos Verificados: 42
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 27
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 12
+ Cantidad de Pedidos Fallidos: 14
+ Cantidad de Pedidos Verificados: 46
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 31
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 13
+ Cantidad de Pedidos Fallidos: 15
+ Cantidad de Pedidos Verificados: 50
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 27
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 16
+ Cantidad de Pedidos Fallidos: 16
+ Cantidad de Pedidos Verificados: 54
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 28
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 15
+ Cantidad de Pedidos Fallidos: 17
+ Cantidad de Pedidos Verificados: 58
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 31
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 17
+ Cantidad de Pedidos Fallidos: 18
+ Cantidad de Pedidos Verificados: 63
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 32
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 19
+ Cantidad de Pedidos Fallidos: 19
+ Cantidad de Pedidos Verificados: 68
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 32
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 18
+ Cantidad de Pedidos Fallidos: 21
+ Cantidad de Pedidos Verificados: 72
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 33
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 22
+ Cantidad de Pedidos Verificados: 76
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 34
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 23
+ Cantidad de Pedidos Verificados: 80
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 37
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 19
+ Cantidad de Pedidos Fallidos: 26
+ Cantidad de Pedidos Verificados: 85
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 33
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 19
+ Cantidad de Pedidos Fallidos: 30
+ Cantidad de Pedidos Verificados: 89
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 35
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 19
+ Cantidad de Pedidos Fallidos: 30
+ Cantidad de Pedidos Verificados: 94
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 37
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 32
+ Cantidad de Pedidos Verificados: 98
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 38
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 19
+ Cantidad de Pedidos Fallidos: 35
+ Cantidad de Pedidos Verificados: 102
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 22
+ Cantidad de Pedidos Fallidos: 36
+ Cantidad de Pedidos Verificados: 106
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 22
+ Cantidad de Pedidos Fallidos: 38
+ Cantidad de Pedidos Verificados: 110
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 41
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 41
+ Cantidad de Pedidos Verificados: 115
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 43
+ Cantidad de Pedidos Verificados: 120
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 46
+ Cantidad de Pedidos Verificados: 124
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 41
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 19
+ Cantidad de Pedidos Fallidos: 49
+ Cantidad de Pedidos Verificados: 128
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 41
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 17
+ Cantidad de Pedidos Fallidos: 52
+ Cantidad de Pedidos Verificados: 132
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 43
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 16
+ Cantidad de Pedidos Fallidos: 56
+ Cantidad de Pedidos Verificados: 137
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 18
+ Cantidad de Pedidos Fallidos: 57
+ Cantidad de Pedidos Verificados: 141
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 17
+ Cantidad de Pedidos Fallidos: 58
+ Cantidad de Pedidos Verificados: 146
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 59
+ Cantidad de Pedidos Verificados: 149
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 20
+ Cantidad de Pedidos Fallidos: 61
+ Cantidad de Pedidos Verificados: 153
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 38
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 22
+ Cantidad de Pedidos Fallidos: 63
+ Cantidad de Pedidos Verificados: 157
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 39
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 24
+ Cantidad de Pedidos Fallidos: 63
+ Cantidad de Pedidos Verificados: 161
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 36
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 24
+ Cantidad de Pedidos Fallidos: 63
+ Cantidad de Pedidos Verificados: 166
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 35
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 25
+ Cantidad de Pedidos Fallidos: 66
+ Cantidad de Pedidos Verificados: 170
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 34
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 26
+ Cantidad de Pedidos Fallidos: 67
+ Cantidad de Pedidos Verificados: 174
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 34
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 28
+ Cantidad de Pedidos Fallidos: 68
+ Cantidad de Pedidos Verificados: 178
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 32
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 29
+ Cantidad de Pedidos Fallidos: 69
+ Cantidad de Pedidos Verificados: 182
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 29
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 28
+ Cantidad de Pedidos Fallidos: 72
+ Cantidad de Pedidos Verificados: 187
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 25
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 30
+ Cantidad de Pedidos Fallidos: 73
+ Cantidad de Pedidos Verificados: 191
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 27
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 27
+ Cantidad de Pedidos Fallidos: 76
+ Cantidad de Pedidos Verificados: 196
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 27
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 30
+ Cantidad de Pedidos Fallidos: 77
+ Cantidad de Pedidos Verificados: 199
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 27
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 32
+ Cantidad de Pedidos Fallidos: 78
+ Cantidad de Pedidos Verificados: 203
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 32
+ Cantidad de Pedidos Fallidos: 79
+ Cantidad de Pedidos Verificados: 207
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 33
+ Cantidad de Pedidos Fallidos: 82
+ Cantidad de Pedidos Verificados: 211
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 32
+ Cantidad de Pedidos Fallidos: 85
+ Cantidad de Pedidos Verificados: 215
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 32
+ Cantidad de Pedidos Fallidos: 87
+ Cantidad de Pedidos Verificados: 220
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 25
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 33
+ Cantidad de Pedidos Fallidos: 89
+ Cantidad de Pedidos Verificados: 224
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 31
+ Cantidad de Pedidos Fallidos: 91
+ Cantidad de Pedidos Verificados: 228
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 24
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 92
+ Cantidad de Pedidos Verificados: 232
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 23
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 93
+ Cantidad de Pedidos Verificados: 237
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 20
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 35
+ Cantidad de Pedidos Fallidos: 96
+ Cantidad de Pedidos Verificados: 241
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 21
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 33
+ Cantidad de Pedidos Fallidos: 99
+ Cantidad de Pedidos Verificados: 246
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 20
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 101
+ Cantidad de Pedidos Verificados: 249
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 20
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 104
+ Cantidad de Pedidos Verificados: 253
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 21
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 31
+ Cantidad de Pedidos Fallidos: 108
+ Cantidad de Pedidos Verificados: 258
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 16
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 32
+ Cantidad de Pedidos Fallidos: 109
+ Cantidad de Pedidos Verificados: 262
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 15
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 33
+ Cantidad de Pedidos Fallidos: 111
+ Cantidad de Pedidos Verificados: 266
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 13
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 33
+ Cantidad de Pedidos Fallidos: 112
+ Cantidad de Pedidos Verificados: 271
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 10
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 115
+ Cantidad de Pedidos Verificados: 274
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 11
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 118
+ Cantidad de Pedidos Verificados: 278
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 10
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 33
+ Cantidad de Pedidos Fallidos: 120
+ Cantidad de Pedidos Verificados: 283
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 7
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 122
+ Cantidad de Pedidos Verificados: 287
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 5
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 123
+ Cantidad de Pedidos Verificados: 291
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 3
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 36
+ Cantidad de Pedidos Fallidos: 124
+ Cantidad de Pedidos Verificados: 296
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 5
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 38
+ Cantidad de Pedidos Fallidos: 124
+ Cantidad de Pedidos Verificados: 300
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 4
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 37
+ Cantidad de Pedidos Fallidos: 127
+ Cantidad de Pedidos Verificados: 305
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 1
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 36
+ Cantidad de Pedidos Fallidos: 129
+ Cantidad de Pedidos Verificados: 309
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 2
+ Cantidad de Pedidos por Entregar: 38
+ Cantidad de Pedidos Fallidos: 129
+ Cantidad de Pedidos Verificados: 313
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 2
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 40
+ Cantidad de Pedidos Fallidos: 130
+ Cantidad de Pedidos Verificados: 317
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 2
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 38
+ Cantidad de Pedidos Fallidos: 134
+ Cantidad de Pedidos Verificados: 322
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 1
+ Cantidad de Pedidos por Entregar: 38
+ Cantidad de Pedidos Fallidos: 135
+ Cantidad de Pedidos Verificados: 326
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 34
+ Cantidad de Pedidos Fallidos: 136
+ Cantidad de Pedidos Verificados: 330
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 30
+ Cantidad de Pedidos Fallidos: 136
+ Cantidad de Pedidos Verificados: 334
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 26
+ Cantidad de Pedidos Fallidos: 136
+ Cantidad de Pedidos Verificados: 338
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 22
+ Cantidad de Pedidos Fallidos: 136
+ Cantidad de Pedidos Verificados: 342
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 18
+ Cantidad de Pedidos Fallidos: 136
+ Cantidad de Pedidos Verificados: 346
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 13
+ Cantidad de Pedidos Fallidos: 137
+ Cantidad de Pedidos Verificados: 350
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 9
+ Cantidad de Pedidos Fallidos: 137
+ Cantidad de Pedidos Verificados: 354
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregar: 4
+ Cantidad de Pedidos Fallidos: 137
+ Cantidad de Pedidos Verificados: 359
+------------------------------------
+ Cantidad de Pedidos en Preparacion: 0
+ Cantidad de Pedidos en Transicion: 0
+ Cantidad de Pedidos por Entregados: 0
+ Cantidad de Pedidos Fallidos: 138
+ Cantidad de Pedidos Verificados: 362
+------------------------------------
+
+ 3 0 1 5 2 2 4 2 2 2 1 5 2 4 5 3 2 2 2 4
+ 3 2 1 4 3 4 3 2 3 5 1 2 3 1 1 2 2 3 3 3
+ 2 5 1 2 3 6 2 1 4 2 4 4 2 3 0 1 3 5 3 1
+ 3 7 1 3 3 3 6 1 5 3 7 3 6 1 3 3 4 2 2 2
+ 3 2 2 3 3 2 3 3 1 3 1 5 1 3 1 0 1 1 2 1
+ 1 1 3 4 2 2 1 3 1 2 5 1 4 4 1 2 2 3 1 2
+ 0 4 2 0 2 1 1 3 3 1 1 2 1 2 2 3 1 2 2 1
+ 3 3 1 4 2 2 5 2 3 2 2 2 1 4 3 3 3 1 1 0
+ 3 4 3 2 3 2 3 1 4 1 2 4 3 4 3 2 6 2 3 3
+ 3 3 1 3 1 3 2 4 2 3 1 4 1 4 4 2 2 2 3 1
+
+------Tiempo de ejecución: 17611 ms------
