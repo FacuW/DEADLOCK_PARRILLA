@@ -25,9 +25,9 @@ public class Logger implements Runnable{
         escribirLog("----Inicio de Registro de Pedidos----", true);
         while ((pedidos.cantPedidosVerificados() + pedidos.cantPedidosFallidos()) < pedidos.getCantPedidos()){
             String log = "------------------------------------";
-            log += "\n Cantidad de Pedidos Preparacion: " + pedidos.cantPedidosEnPreparacion();
-            log += "\n Cantidad de Pedidos Transicion: " + pedidos.cantPedidosEnTransicion();
-            log += "\n Cantidad de Pedidos Entregados: " + pedidos.cantPedidosEntregados();
+            log += "\n Cantidad de Pedidos en Preparacion: " + pedidos.cantPedidosEnPreparacion();
+            log += "\n Cantidad de Pedidos en Transicion: " + pedidos.cantPedidosEnTransicion();
+            log += "\n Cantidad de Pedidos por Entregar: " + pedidos.cantPedidosEntregados();
             log += "\n Cantidad de Pedidos Fallidos: " + pedidos.cantPedidosFallidos();
             log += "\n Cantidad de Pedidos Verificados: " + pedidos.cantPedidosVerificados();
             escribirLog(log, false);
@@ -39,9 +39,9 @@ public class Logger implements Runnable{
         }
         //Tiene que haber una última escritura fuera del while() para que figure como terminaron las variables
         String log = "------------------------------------";
-        log += "\n Cantidad de Pedidos Preparacion: " + pedidos.cantPedidosEnPreparacion();
-        log += "\n Cantidad de Pedidos Transicion: " + pedidos.cantPedidosEnTransicion();
-        log += "\n Cantidad de Pedidos Entregados: " + pedidos.cantPedidosEntregados();
+        log += "\n Cantidad de Pedidos en Preparacion: " + pedidos.cantPedidosEnPreparacion();
+        log += "\n Cantidad de Pedidos en Transicion: " + pedidos.cantPedidosEnTransicion();
+        log += "\n Cantidad de Pedidos por Entregados: " + pedidos.cantPedidosEntregados();
         log += "\n Cantidad de Pedidos Fallidos: " + pedidos.cantPedidosFallidos();
         log += "\n Cantidad de Pedidos Verificados: " + pedidos.cantPedidosVerificados();
         log += "\n------------------------------------";
