@@ -1,5 +1,4 @@
 package src;
-
 public class CreateThreads {
     private int cantHilos;
     private Runnable proceso;

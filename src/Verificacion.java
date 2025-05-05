@@ -2,7 +2,6 @@ package src;
 import java.util.concurrent.ThreadLocalRandom;
 public class Verificacion implements Runnable{
     private Pedidos pedidos;
-    private int contadorDePedidos = 0;
     public Verificacion(Pedidos pedidos) {
         this.pedidos = pedidos;
     }
@@ -20,7 +19,6 @@ public class Verificacion implements Runnable{
                     boolean infoCorrecta = ThreadLocalRandom.current().nextInt(0, 100) < 95;
                     if (infoCorrecta){
                         pedidos.setPedidoVerificado(pedido);//seteo el pedido a PedidoEntregados
-                        //contadorDePedidos++; //aumento contadorDePedidos para salir del while()
                     }
                     else {
                         pedido.setEstado(EstadoPedido.FALLIDO);

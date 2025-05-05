@@ -1,5 +1,4 @@
 package src;
-
 public class Casillero {
     private EstadoCasillero estado;
     private int contador;

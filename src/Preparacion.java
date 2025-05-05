@@ -1,9 +1,6 @@
 package src;
-
 import java.util.concurrent.ThreadLocalRandom;
-
 public class Preparacion implements Runnable{
-
     private Matriz matriz; //para tener referencia de la matriz
     private Pedidos pedidos; //para tener referencia de los pedidos (todas las listas)
     private int contadorDePedidos = 0; //para poder comparar con la cantidad de pedidos
