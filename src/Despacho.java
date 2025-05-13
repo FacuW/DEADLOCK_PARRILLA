@@ -8,13 +8,13 @@ public class Despacho implements Runnable{
         this.matriz = matriz;  ///hay que protegerla de una SC al tomar un mismo casillero
         this.pedidos = pedidos;
     }
-    private Object lockMatriz = new Object();
+    private Object lockPedido = new Object();
     @Override
     public void run() {
         while (contadorDePedidos < pedidos.getCantPedidos()) {
             Pedido pedido = null;
             //---inicio SC---//
-            synchronized (lockMatriz) { ///cambiar
+            synchronized (lockPedido) { ///cambiar
                 if (pedidos.cantPedidosEnPreparacion() > 0) { //si no hay pedidos en preparacion pasa a la siguiente itereacion
                     //no hace falta controlar si el pedido es null en esta instancia porque este es el unico proceso
                     //que saca pedidos de la lista anterior
