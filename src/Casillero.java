@@ -11,8 +11,23 @@ public class Casillero {
     public void setEstado(EstadoCasillero estado) {
         this.estado = estado;
     }
-    public EstadoCasillero getEstado() {
-        return estado;
+    private Object lockCasillero = new Object();
+    public boolean getVacio() { //metodo para preguntar si esta vacio, y si lo esta cambia de estado
+        synchronized (lockCasillero){ //
+            if (estado == EstadoCasillero.VACIO){
+                setEstado(EstadoCasillero.OCUPADO);
+                return true;
+            }
+            return false;
+        }
+    }
+    public void getOcupado() { //metodo para preguntar si esta ocupado, y si lo esta cambia de estado y borra el pedido asociado
+        synchronized (lockCasillero){
+            if (estado == EstadoCasillero.OCUPADO){
+                setEstado(EstadoCasillero.VACIO);
+                borrarPedido();
+            }
+        }
     }
     public void aumentaContador(){
         this.contador++;
