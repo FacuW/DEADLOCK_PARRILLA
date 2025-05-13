@@ -18,9 +18,7 @@ public class Matriz {
     }
     private Object lockMatriz = new Object();
     public Casillero[][] getMatriz() {
-        synchronized (lockMatriz){ //se protege porque se puede devolver una matriz desactualizada
-            return matriz;
-        }
+        return matriz;
     }
     public int getColumnas() {
         return columnas;
